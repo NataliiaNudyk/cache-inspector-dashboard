@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --dark-theme: #222131;
+  --dark-surface: #39394B;
+  --progreess-bar-primary: #605CFF;
+  --progreess-bar-secondary: #FF69B4;
+  --progreess-bar-accent: #2FE5A7;
+  --main-text-color: #fff;
+  --text-color: #9D9FB1;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  background-color: var(--dark-theme);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h5 {
+  color: var(--main-text-color);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
