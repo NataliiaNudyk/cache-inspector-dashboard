@@ -28,8 +28,8 @@ export default function CacheInspector() {
   return (
     <div className=" bg-(--dark-surface) p-6 rounded-[10px]">
       <h2>Cache Inspector</h2>
-      <div className="flex flex-col justify-between h-75">
-        <table className="">
+      <div className="flex flex-col">
+        <table className="mb-4">
           <thead className="border-b h-12.5">
             <tr>
               <th>Key</th>

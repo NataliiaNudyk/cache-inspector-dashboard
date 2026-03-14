@@ -17,8 +17,7 @@ const STORAGE_KEY = "cache_token";
 export default function SessionToken() {
   const [age, setAge] = useState<string>("0s");
 
-  // eslint-disable-next-line
- const [tokenData, setTokenData] = useState<TokenData>(() => {
+ const [tokenData] = useState<TokenData>(() => {
   const stored = localStorage.getItem(STORAGE_KEY);
   if (stored) {
     return JSON.parse(stored);
@@ -48,17 +47,17 @@ export default function SessionToken() {
   if (!tokenData) return <div>Loading token...</div>;
 
   return (
-    <div className="bg-(--dark-surface) rounded-[10px] p-[24px] h-[200px]">
+    <div className="bg-(--dark-surface) rounded-[10px] p-6 h-50">
       <h2>Session Token</h2>
       <div className="flex justify-between">
-        <p className="flex flex-col bg-(--dark-theme) w-1/3 h-[100px] p-[8px] rounded-[10px] wrap-anywhere">
+        <p className="flex flex-col bg-(--dark-theme) w-1/3 h-25 p-2 rounded-[10px] wrap-anywhere">
           <strong className="text-(--main-text-color)">Token:</strong> {tokenData.token}
         </p>
-        <p className="flex  flex-col bg-(--dark-theme) w-1/4 h-[100px] p-[8px] rounded-[10px] wrap-anywhere">
+        <p className="flex  flex-col bg-(--dark-theme) w-1/4 h-25 p-2 rounded-[10px] wrap-anywhere">
           <strong className="text-(--main-text-color)">Created at:</strong>{" "}
           {new Date(tokenData.createdAt).toLocaleString()}
         </p>
-        <p className="flex flex-col bg-(--dark-theme) w-1/4 h-[100px] p-[8px] rounded-[10px] wrap-anywhere">
+        <p className="flex flex-col bg-(--dark-theme) w-1/4 h-25 p-2 rounded-[10px] wrap-anywhere">
           <strong className="text-(--main-text-color)">Age:</strong> {age}
         </p>
       </div>
